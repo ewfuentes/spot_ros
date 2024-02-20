@@ -2030,6 +2030,7 @@ class SpotROS:
             username=self.username,
             password=self.password,
             hostname=self.hostname,
+            port=0,
             robot_name=self.robot_name,
             logger=self.logger,
             start_estop=self.start_estop,
