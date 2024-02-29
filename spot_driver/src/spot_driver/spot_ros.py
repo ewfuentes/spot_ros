@@ -2079,10 +2079,10 @@ class SpotROS:
             self.publish_camera_images_callback,
             max(0.0, self.rates.get("camera_images", 10)),
         )
-        rate_publish_depth_images = RateLimitedCall(
-            self.publish_depth_images_callback,
-            max(0.0, self.rates.get("camera_images", 10)),
-        )
+        # rate_publish_depth_images = RateLimitedCall(
+        #     self.publish_depth_images_callback,
+        #     max(0.0, self.rates.get("camera_images", 10)),
+        # )
 
         # Retrieval and publication of images can take some time, so break it out into its own thread. It's likely this
         # could be sped up further by breaking it out into separate nodes.
