@@ -2087,7 +2087,7 @@ class SpotROS:
         # Retrieval and publication of images can take some time, so break it out into its own thread. It's likely this
         # could be sped up further by breaking it out into separate nodes.
         camera_publish_thread = ThreadedFunctionLoop(rate_publish_camera_images, rate)
-        depth_publish_thread = ThreadedFunctionLoop(rate_publish_depth_images, rate)
+        # depth_publish_thread = ThreadedFunctionLoop(rate_publish_depth_images, rate)
         update_tasks_thread = ThreadedFunctionLoop(self.spot_wrapper.updateTasks, rate)
         feedback_thread = ThreadedFunctionLoop(rate_limited_feedback, rate)
         mobility_thread = ThreadedFunctionLoop(rate_limited_mobility_params, rate)
